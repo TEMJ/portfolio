@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: arial, sans-serif;
+    scroll-behavior: smooth;
 } 
 section{
     padding: 100px;
@@ -204,11 +205,186 @@ img{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 .testimonial .content .testimonialbx{
-    max-width: calc(50% - 10px);
+    width: calc(50% - 10px);
     padding: 60px 40px;
     margin: 10px;
     background: #2196f3;
+}
+.testimonial .content .testimonialbx p{
+    font-style: italic;
+    color: #fff;
+    font-size: 15px;
+}
+.testimonial .content .testimonialbx h3{
+    margin-top: 15px;
+    font-weight: 800;
+    color: #fff;
+    text-align: end; 
+    font-size: 19px;
+}
+.testimonial .content .testimonialbx h3 span{
+    font-weight: 800;
+    color: rgb(216, 216, 216);
+    font-size: 15px;
+}
+.contact{
+    background-color: rgb(0, 0, 0);
+    /* color: #fff; */
+    padding-top: 35px;
+
+}
+.formbx{
+    min-width: 60%;
+
+}
+.formbx form{
+    display: flex;
+    flex-direction: column;
+}
+.formbx form h3,.contactinfo h3{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 11px;
+}
+.formbx form input,
+.formbx form textarea{
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    background: #222;
+    border: none;
+    outline: none;
+    color: #fff;
+    resize: none;
+}
+.formbx form input::placeholder,
+.formbx form textarea::placeholder{
+    color: #999; 
+    font-style: italic;
+}
+.formbx form input[type="submit"]{
+    max-width: 100px;
+    background: #2196f3;
+    cursor: pointer;
+    text-transform: uppercase;
+    /* letter-spacing: 2px; */
+    padding: 10px;
+}
+.contactinfo{
+    min-width: 40%;
+}
+.contactinfobx{
+    position: relative;
+}
+.contactinfobx .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.contactinfobx .box .icon img{
+    width: 25px;
+}
+.contactinfobx .box .icon{
+    min-width: 40px;
+    /* padding-top: 4px; */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 50px;
+    filter: invert(1); 
+}
+.contactinfobx .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+}
+.contactinfobx .box .text h3{
+    font-weight: 500;
+    color: #2196f3;
+}
+.copy{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width:805px){
+    header,
+    header.sticky{
+        padding: 20px 50px;
+        padding-bottom: 20px;
+    } 
+    .menu{
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        display: block;
+        padding: 100px 50px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff; 
+        /* color: rgb(0, 0, 0); */
+        transition: 0.5s;
+        z-index: 999;
+        border-top: 1px solid rgba(0, 0, 0, 0.151);
+    }
+    .menu.active{
+        left: 0;
+    }
+    header ul li a{
+        color: #111;
+        font-weight: bold;
+        font-size: 24px;
+        margin: 10px;
+    }
+    .toggle{
+        width: 35px;
+        height: 35px;
+        background: url(menu_50px.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        cursor: pointer;
+        filter: invert(1);
+    }
+    .toggle.active{
+        background: url(delete_48px.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+        filter: invert(1);
+    }
+    header.sticky .toggle{
+        filter: none 
+    }
+    section{
+        padding: 100px 50px;
+    }
+    .banner{
+        padding: 150px 50px 100px;
+    }
+    .banner h2{
+        font-size: 1.5em; 
+        transition: 0.7s;
+    }
+    .banner h2 span{
+        font-size: 1.5em; 
+        transition: 0.5s;
+
+    }
+    .banner h3{
+        font-size: 1em; 
+        transition: 0.7s;
+
+    }
 }
